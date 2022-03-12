@@ -17,7 +17,7 @@ func TestNotFoundHandler(t *testing.T) {
 		fmt.Fprint(w, "Page not found")
 	})
 
-	request := httptest.NewRequest(http.MethodGet, "http://localhost:3000/products/5/items/10", nil)
+	request := httptest.NewRequest(http.MethodGet, "http://localhost:3000", nil)
 	recorder := httptest.NewRecorder()
 
 	router.ServeHTTP(recorder, request)
